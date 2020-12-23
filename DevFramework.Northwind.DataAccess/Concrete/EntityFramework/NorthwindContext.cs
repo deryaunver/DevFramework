@@ -4,11 +4,12 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
 using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
 {
-   public class NorthwindContext:DbContext
+    public class NorthwindContext : DbContext
     {
         public NorthwindContext()
         {
@@ -16,6 +17,11 @@ namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
             //O yüzdem sen gidip veritabanında( görmediğğinde onu oluşturmaya çalışma) birşey oluşturma.
             Database.SetInitializer<NorthwindContext>(null);
         }
-        public DbSet<Product>Products { get; set; }
+        public DbSet<Product> Products { get; set; }
+        //yazdığımız mappingi ayağa kaldırıyoruz.
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ProductMap());
+        }
     }
 }
