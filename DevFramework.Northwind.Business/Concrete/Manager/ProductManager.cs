@@ -35,6 +35,10 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             //ValidatorTool.Validate(new ProductValidator(), product);
             return _productDal.Add(product);
         }
+        //Bu aspecti nasıl bir validator ile validate etmesini istiyorum.
+        //Yani:ProductValidator Product ı valide ediyor.
+        //bende dicemki ProdactValidator'a parametre olarak senin validate etmen gereke(product)
+        //bulduğun zaman onu benim yerime validete et...
         [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)
         {
