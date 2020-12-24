@@ -24,7 +24,7 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
       {
           return _productDal.GetAll();
       }
-
+         
         public Product Get(int id)
         {
             return _productDal.Get(P => P.ProductID == id);
