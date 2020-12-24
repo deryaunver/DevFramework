@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DevFramework.Core.DataAccess.NHibernate;
 using DevFramework.Northwind.DataAccess.Abstract;
+using DevFramework.Northwind.Entities.ComplexTypes;
 using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate
@@ -13,6 +14,11 @@ namespace DevFramework.Northwind.DataAccess.Concrete.NHibernate
     {
         public NhProductDal(NHibernateHelper nHibernateHelper) : base(nHibernateHelper)
         {
+        }
+
+        public List<ProductDetail> GetProductDetails()
+        {
+            throw new NotImplementedException();
         }
     }
 }
