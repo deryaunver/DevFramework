@@ -12,10 +12,10 @@ namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
     public class NorthwindContext : DbContext
     {
         public NorthwindContext()
-        {
+        { 
             //Hazır bir veritabanı kullanıyorum .Veritabanımı Tasarladım.
             //O yüzdem sen gidip veritabanında( görmediğğinde onu oluşturmaya çalışma) birşey oluşturma.
-            Database.SetInitializer<NorthwindContext>(null);
+            Database.SetInitializer<NorthwindContext>(null); 
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
