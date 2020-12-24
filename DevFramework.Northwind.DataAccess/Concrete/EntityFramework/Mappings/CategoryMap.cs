@@ -8,7 +8,7 @@ using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings
 {
-   public class CategoryMap:EntityTypeConfiguration<Category>
+   public class CategoryMap:EntityTypeConfiguration<Category> 
     {
         public CategoryMap()
         {

@@ -13,3 +13,4 @@ namespace DevFramework.Northwind.Entities.Concrete
         public virtual string CategoryName { get; set; }
     }
 }
+ 

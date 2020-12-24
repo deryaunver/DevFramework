@@ -9,7 +9,7 @@ using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
 {
-  public  class EfCategoryDal:EfEntityRepositoryBase<Category,NorthwindContext>,ICategoryDal 
+  public  class EfCategoryDal:EfEntityRepositoryBase<Category,NorthwindContext>,ICategoryDal  
     {
     }
 }

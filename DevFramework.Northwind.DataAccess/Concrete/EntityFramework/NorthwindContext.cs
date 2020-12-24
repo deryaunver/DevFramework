@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DevFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
 using DevFramework.Northwind.Entities.Concrete;
 
-namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework
+namespace DevFramework.Northwind.DataAccess.Concrete.EntityFramework 
 {
     public class NorthwindContext : DbContext
     {
