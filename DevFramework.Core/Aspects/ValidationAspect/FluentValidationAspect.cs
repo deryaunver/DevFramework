@@ -27,7 +27,7 @@ namespace DevFramework.Core.Aspects.ValidationAspect
           var entities = args.Arguments.Where(t => t.GetType() == entityType);
           foreach (var entity in entities)
           {
-                ValidatorTool.FluentValidate((IValidator<object>)validator,entity);
+                ValidatorTool.FluentValidate((IValidator<object>)validator,entity); 
           }
 
       }
