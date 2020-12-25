@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevFramework.Core.Aspects.ValidationAspect;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
@@ -37,7 +38,7 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
         }
         //Bu aspecti nasıl bir validator ile validate etmesini istiyorum.
         //Yani:ProductValidator Product ı valide ediyor.
-        //bende dicemki ProdactValidator'a parametre olarak senin validate etmen gereke(product)
+        //bende dicemki ProdactValidator'a parametre olarak senin validate etmen gereken(product)
         //bulduğun zaman onu benim yerime validete et...
         [FluentValidationAspect(typeof(ProductValidator))]
         public Product Update(Product product)

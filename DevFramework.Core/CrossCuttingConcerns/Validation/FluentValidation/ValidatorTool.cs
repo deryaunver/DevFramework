@@ -13,7 +13,7 @@ namespace DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation
         //IValidator: buraya productValidator gelebilri,categoryValidator Gelebilir .
         //Bunların herbirinin aslında Base i :IValidator dür.
         //T entity:tüm nesnelerin basei , product,category...
-        public static void Validate<T>(IValidator<T> validator, T entity)
+        public static void FluentValidate<T>(IValidator<T> validator, T entity)
         {
 
             var result = validator.Validate(entity);
@@ -22,5 +22,7 @@ namespace DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation
                 throw new ValidationException(result.Errors);
             }
         }
+
+   
     }
 }
