@@ -21,8 +21,8 @@ namespace DevFramework.Core.Aspects.ValidationAspect
 
       public override void OnEntry(MethodExecutionArgs args)
       {
-          //IValidator validator = (IValidator)Activator.CreateInstance(_validatorType);
-          var validator = (IValidator)Activator.CreateInstance(_validatorType);
+          IValidator validator = (IValidator)Activator.CreateInstance(_validatorType);
+         // var validator = (IValidator)Activator.CreateInstance(_validatorType);
           var entityType = _validatorType.BaseType.GetGenericArguments()[0];
           var entities = args.Arguments.Where(t => t.GetType() == entityType);
           foreach (var entity in entities)

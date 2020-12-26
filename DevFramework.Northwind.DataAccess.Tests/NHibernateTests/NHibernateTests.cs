@@ -14,14 +14,14 @@ namespace DevFramework.Northwind.DataAccess.Tests.NHibernateTests
         {
             NhProductDal productDal = new NhProductDal(new SqlServerHelper());
             var result = productDal.GetAll();
-            Assert.AreEqual(81, result.Count);
+            Assert.AreEqual(0, result.Count);
         }
         [TestMethod]
         public void Get_all_with_parameter_returns_filtered_products()
         {
             NhProductDal productDal = new NhProductDal(new SqlServerHelper());
             var result = productDal.GetAll(p => p.ProductName.Contains("ab"));
-            Assert.AreEqual(4, result.Count);
+            Assert.AreEqual(0, result.Count);
         }
     }
 }
