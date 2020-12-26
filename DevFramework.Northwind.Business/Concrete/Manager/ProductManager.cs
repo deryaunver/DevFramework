@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevFramework.Core.Aspects.ValidationAspect;
+using System.Transactions;
+using DevFramework.Core.Aspects.Postsharp.TransactionAspect;
+using DevFramework.Core.Aspects.Postsharp.ValidationAspect;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
@@ -46,5 +48,30 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             //ValidatorTool.Validate(new ProductValidator(), product);
             return _productDal.Update(product);
         }
-  }
+        [TransactionScopeAspect]
+        public void TransactionalOperation(Product product1, Product product2)
+        {
+            #region Yöntem1
+            //using (TransactionScope scope= new TransactionScope())
+            //{
+            //    try
+            //    {
+            //        _productDal.Add(product1);
+            //        //business code
+            //        _productDal.Update(product2);
+            //        scope.Complete();
+
+            //    }
+            //    catch 
+            //    {
+            //        scope.Dispose();
+            //    }
+            //} 
+            #endregion
+                    _productDal.Add(product1);
+                    //business code
+                    _productDal.Update(product2);
+            
+        }
+    }
 }
