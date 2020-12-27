@@ -35,6 +35,7 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             return _productDal.Get(P => P.ProductID == id);
         }
         [FluentValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Product Add(Product product)
         {
             //ValidatorTool.Validate(new ProductValidator(), product);
