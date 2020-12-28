@@ -18,21 +18,22 @@ using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.Business.Concrete.Manager
 {
-  public  class ProductManager:IProductService
-  {
-      private IProductDal _productDal;
+    public class ProductManager : IProductService
+    {
+        private IProductDal _productDal;
 
-      public ProductManager(IProductDal productDal)
-      {
-          _productDal = productDal;
-      }
-      [CacheAspect(typeof(MemoryCacheManager))]
-      [LogAspect(typeof(DatabaseLogger))]
-      public List<Product> GetAll()
-      {
-          return _productDal.GetAll();
-      }
-         
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
+        [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
+        [LogAspect(typeof(FileLogger))]
+        public List<Product> GetAll()
+        {
+            return _productDal.GetAll();
+        }
+
         public Product Get(int id)
         {
             return _productDal.Get(P => P.ProductID == id);
@@ -74,10 +75,10 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             //    }
             //} 
             #endregion
-                    _productDal.Add(product1);
-                    //business code
-                    _productDal.Update(product2);
-            
+            _productDal.Add(product1);
+            //business code
+            _productDal.Update(product2);
+
         }
     }
 }
