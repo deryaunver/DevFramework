@@ -5,9 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 using DevFramework.Core.Aspects.Postsharp.CacheAspects;
+using DevFramework.Core.Aspects.Postsharp.LogAspects;
 using DevFramework.Core.Aspects.Postsharp.TransactionAspect;
 using DevFramework.Core.Aspects.Postsharp.ValidationAspect;
 using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
+using DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.ValidationRules.FluentValidation;
@@ -25,6 +27,7 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
           _productDal = productDal;
       }
       [CacheAspect(typeof(MemoryCacheManager))]
+      [LogAspect(typeof(DatabaseLogger))]
       public List<Product> GetAll()
       {
           return _productDal.GetAll();
