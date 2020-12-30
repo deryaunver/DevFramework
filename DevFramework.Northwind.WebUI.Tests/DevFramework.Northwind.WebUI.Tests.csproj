@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}</ProjectGuid>
+    <ProjectGuid>{548C6845-CF5D-4C87-9E32-79026447A0A9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DevFramework.Northwind.MvcWebUI.Tests</RootNamespace>
-    <AssemblyName>DevFramework.Northwind.MvcWebUI.Tests</AssemblyName>
+    <RootNamespace>DevFramework.Northwind.WebUI.Tests</RootNamespace>
+    <AssemblyName>DevFramework.Northwind.WebUI.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -63,9 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DevFramework.Northwind.MvcWebUI\DevFramework.Northwind.MvcWebUI.csproj">
-      <Project>{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}</Project>
-      <Name>DevFramework.Northwind.MvcWebUI</Name>
+    <ProjectReference Include="..\DevFramework.Northwind.WebUI\DevFramework.Northwind.WebUI.csproj">
+      <Project>{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}</Project>
+      <Name>DevFramework.Northwind.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

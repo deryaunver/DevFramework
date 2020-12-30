@@ -11,15 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.Business", "DevFramework.Northwind.Business\DevFramework.Northwind.Business.csproj", "{D9CEB966-6C20-4AEE-AF7C-C79E5D163223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.MvcWebUI", "DevFramework.Northwind.MvcWebUI\DevFramework.Northwind.MvcWebUI.csproj", "{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.MvcWebUI.Tests", "DevFramework.Northwind.MvcWebUI.Tests\DevFramework.Northwind.MvcWebUI.Tests.csproj", "{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.Business.Tests", "DevFramework.Northwind.Business.Tests\DevFramework.Northwind.Business.Tests.csproj", "{089C8B2B-8351-49F2-917C-DC786DA39441}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WebApi", "DevFramework.Northwind.WebApi\DevFramework.Northwind.WebApi.csproj", "{A27FBF04-BE3A-403D-BBF1-293B01077540}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.DataAccess.Tests", "DevFramework.Northwind.DataAccess.Tests\DevFramework.Northwind.DataAccess.Tests.csproj", "{17B55D00-2C4E-4680-8346-C1035CF76089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WebUI", "DevFramework.Northwind.WebUI\DevFramework.Northwind.WebUI.csproj", "{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevFramework.Northwind.WebUI.Tests", "DevFramework.Northwind.WebUI.Tests\DevFramework.Northwind.WebUI.Tests.csproj", "{548C6845-CF5D-4C87-9E32-79026447A0A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,14 +43,6 @@ Global
 		{D9CEB966-6C20-4AEE-AF7C-C79E5D163223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9CEB966-6C20-4AEE-AF7C-C79E5D163223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9CEB966-6C20-4AEE-AF7C-C79E5D163223}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF3E2AB1-D268-44A9-9024-AB7A89248BEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB6D8964-0C0D-4E48-A3B7-F70AD08F50FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{089C8B2B-8351-49F2-917C-DC786DA39441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{089C8B2B-8351-49F2-917C-DC786DA39441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{089C8B2B-8351-49F2-917C-DC786DA39441}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +55,14 @@ Global
 		{17B55D00-2C4E-4680-8346-C1035CF76089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B55D00-2C4E-4680-8346-C1035CF76089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B55D00-2C4E-4680-8346-C1035CF76089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E0BEEF-D001-485D-B59C-6B355CD13FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548C6845-CF5D-4C87-9E32-79026447A0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548C6845-CF5D-4C87-9E32-79026447A0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548C6845-CF5D-4C87-9E32-79026447A0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548C6845-CF5D-4C87-9E32-79026447A0A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

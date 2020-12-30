@@ -22,7 +22,18 @@ namespace DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation
                 throw new ValidationException(result.Errors);
             }
         }
+    
 
-   
+        //public static void FluentValidate(IValidator validator, object entity)
+        //{
+
+        //    var result = validator.Validate((IValidationContext) entity);
+        //    if (result.Errors.Count > 0)
+        //    {
+        //        throw new ValidationException(result.Errors);
+        //    }
+        //}
+
+
     }
 }

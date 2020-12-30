@@ -30,6 +30,8 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
             {
                 throw  new Exception("Wrong Cache Manager");
             }
+
+            _cacheManager = (ICacheManager) Activator.CreateInstance(_cacheType);
             base.RuntimeInitialize(method);
         }
 
