@@ -18,7 +18,7 @@ using DevFramework.Northwind.Entities.Concrete;
 
 namespace DevFramework.Northwind.Business.Concrete.Manager
 {
-    public class ProductManager : IProductService
+    public class ProductManager : IProductService 
     {
         private IProductDal _productDal;
 
