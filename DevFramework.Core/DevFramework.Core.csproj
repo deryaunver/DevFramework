@@ -113,6 +113,7 @@
     <Compile Include="Aspects\Postsharp\CacheAspects\CacheRemoveAspect.cs" />
     <Compile Include="Aspects\Postsharp\ExceptionAspects\ExceptionLogAspect.cs" />
     <Compile Include="Aspects\Postsharp\LogAspects\LogAspect.cs" />
+    <Compile Include="Aspects\Postsharp\PerformanceAspects\PerformanceCounterAspect.cs" />
     <Compile Include="Aspects\Postsharp\TransactionAspect\TransactionScopeAspect.cs" />
     <Compile Include="Aspects\Postsharp\ValidationAspect\FluentValidationAspect.cs" />
     <Compile Include="CrossCuttingConcerns\Caching\ICacheManager.cs" />
