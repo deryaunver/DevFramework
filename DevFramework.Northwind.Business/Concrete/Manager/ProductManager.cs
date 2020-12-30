@@ -56,6 +56,7 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             return _productDal.Update(product);
         }
         [TransactionScopeAspect]
+        [FluentValidationAspect(typeof(ProductValidator))]
         public void TransactionalOperation(Product product1, Product product2)
         {
             #region Yöntem1
