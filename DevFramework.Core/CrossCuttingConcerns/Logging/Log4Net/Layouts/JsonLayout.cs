@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Layouts
 {
-  public  class JsonLayout:LayoutSkeleton
+  public  class JsonLayout:LayoutSkeleton 
     {
         public override void ActivateOptions()
         {
