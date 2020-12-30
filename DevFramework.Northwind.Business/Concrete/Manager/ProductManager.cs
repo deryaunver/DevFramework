@@ -27,8 +27,8 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
             _productDal = productDal;
         }
         [CacheAspect(typeof(MemoryCacheManager))]
-        [LogAspect(typeof(DatabaseLogger))]
-        [LogAspect(typeof(FileLogger))]
+       // [LogAspect(typeof(DatabaseLogger))]
+       // [LogAspect(typeof(FileLogger))]
         public List<Product> GetAll()
         {
             return _productDal.GetAll();
