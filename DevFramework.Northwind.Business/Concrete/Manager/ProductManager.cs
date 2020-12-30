@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
 using DevFramework.Core.Aspects.Postsharp.CacheAspects;
 using DevFramework.Core.Aspects.Postsharp.LogAspects;
+using DevFramework.Core.Aspects.Postsharp.PerformanceAspects;
 using DevFramework.Core.Aspects.Postsharp.TransactionAspect;
 using DevFramework.Core.Aspects.Postsharp.ValidationAspect;
 using DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft;
@@ -26,11 +28,13 @@ namespace DevFramework.Northwind.Business.Concrete.Manager
         {
             _productDal = productDal;
         }
+        // [LogAspect(typeof(DatabaseLogger))]
+        // [LogAspect(typeof(FileLogger))]
         [CacheAspect(typeof(MemoryCacheManager))]
-       // [LogAspect(typeof(DatabaseLogger))]
-       // [LogAspect(typeof(FileLogger))]
+        [PerformanceCounterAspect(2)]
         public List<Product> GetAll()
         {
+            //Thread.Sleep(3000);
             return _productDal.GetAll();
         }
 
