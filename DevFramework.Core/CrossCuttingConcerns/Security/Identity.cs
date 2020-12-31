@@ -9,9 +9,9 @@ namespace DevFramework.Core.CrossCuttingConcerns.Security
 {
    public class Identity:IIdentity
     {
-        public string Name { get; }
-        public string AuthenticationType { get; }
-        public bool IsAuthenticated { get; }
+        public string Name { get; set; }
+        public string AuthenticationType { get; set; }
+        public bool IsAuthenticated { get; set; }
         //Kendi Kurallarım
         public Guid Id { get; set; }
         public string FirstName { get; set; }
