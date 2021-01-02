@@ -10,6 +10,7 @@ using DevFramework.Core.DataAccess.NHibernate;
 using DevFramework.Northwind.Business.Abstract;
 using DevFramework.Northwind.Business.Concrete.Manager;
 using DevFramework.Northwind.DataAccess.Abstract;
+using DevFramework.Northwind.DataAccess.Concrete;
 using DevFramework.Northwind.DataAccess.Concrete.EntityFramework;
 using DevFramework.Northwind.DataAccess.Concrete.NHibernate.Helpers;
 using Ninject.Modules;
@@ -22,6 +23,9 @@ namespace DevFramework.Northwind.Business.DependencyResolvers.Ninject
         {
             Bind<IProductService>().To<ProductManager>().InSingletonScope();
             Bind<IProductDal>().To<EfProductDal>().InSingletonScope();
+
+            Bind<IUserService>().To<UserManager>().InSingletonScope();
+            Bind<IUserDal>().To<EfUserDal>().InSingletonScope();
 
             Bind(typeof(IQueryableRepository<>)).To(typeof(EfQueryableRepository<>));
             Bind<DbContext>().To<NorthwindContext>();
