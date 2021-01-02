@@ -50,10 +50,10 @@ namespace DevFramework.Northwind.WebUI.Controllers
             },
                 new Product
                 {
-                    CategoryID = 1,
+                    CategoryID = 2,
                     ProductName = "Computer 2",
                     QuantityPerUnit = "1",
-                    UnitPrice = 30,
+                    UnitPrice = 11,
                     ProductID = 2
                 });
             return "Done";

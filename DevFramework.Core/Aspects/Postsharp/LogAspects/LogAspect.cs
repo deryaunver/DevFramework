@@ -36,7 +36,7 @@ namespace DevFramework.Core.Aspects.Postsharp.LogAspects
 
       public override void OnEntry(MethodExecutionArgs args)
       {
-          if (!_loggerService.IsFatalEnabled)
+          if (!_loggerService.IsInfoEnabled)
           {
               return;
           }

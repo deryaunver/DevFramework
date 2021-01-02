@@ -43,6 +43,10 @@ namespace DevFramework.Core.CrossCuttingConcerns.Caching.Microsoft
         {
             var regex = new Regex(pattern,RegexOptions.Singleline|RegexOptions.Compiled|RegexOptions.IgnoreCase);
             var keysToRemove = Cache.Where(d => regex.IsMatch(d.Key)).Select(d => d.Key).ToList();
+            foreach (var key in keysToRemove)
+            {
+                    Remove(key);
+            }
         }
 
         public void Clear()

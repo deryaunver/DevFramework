@@ -32,6 +32,8 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
             {
                 throw new Exception("Wrong Cache Manager");
             }
+
+            _cacheManager = (ICacheManager) Activator.CreateInstance(_cacheType);
             base.RuntimeInitialize(method);
         }
 
@@ -40,7 +42,7 @@ namespace DevFramework.Core.Aspects.Postsharp.CacheAspects
             _cacheManager.RemoveByPatterns(string.IsNullOrEmpty(_pattern)
                 ? string.Format("{0}.{1}.*", args.Method.ReflectedType.Namespace, args.Method.ReflectedType.Name)
                 : _pattern);
-            base.OnSuccess(args);
+           // base.OnSuccess(args);
         }
     }
 }

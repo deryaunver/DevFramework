@@ -1,4 +1,6 @@
 ﻿using System;
+using System.CodeDom;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using DevFramework.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using FluentValidation;
@@ -25,8 +27,8 @@ namespace DevFramework.Core.Aspects.Postsharp.ValidationAspect
           foreach (var entity in entities)
           {
                // ValidatorTool.FluentValidate((IValidator<object>)validator,entity); 
-                ValidatorTool.FluentValidate((IValidator<object>)validator,entity); 
-                //ValidatorTool.FluentValidate(validator,entity); 
+                //ValidatorTool.FluentValidate((IValidator<object>)validator,entity); 
+                ValidatorTool.FluentValidate(validator,entity); 
           }
 
       }
